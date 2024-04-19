@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>“言传华夏”——中国首个为全民族定向打造的汉语学习平台 </title>
+
+		<!-- 引入Google Fonts中的Montserrat字体 -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		<!-- 引入Bootstrap CSS框架样式文件 -->
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
+
+		<!-- 引入Slick轮播插件的样式文件；引入nouislider滑块插件的样式文件 -->
+		<link type="text/css" rel="stylesheet" href="../css/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/slick-theme.css"/>
+
+		<!-- 引入nouislider滑块插件的样式文件-->
+		<link type="text/css" rel="stylesheet" href="../css/nouislider.min.css"/>
+
+		<!-- 引入Font Awesome字体图标库的样式文件 -->
+		<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+		<!-- 引入自定义的CSS样式文件 -->
+		<link type="text/css" rel="stylesheet" href="../css/start.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+	<body class="back--ground ">
+		<!-- HEADER -->
+		<header>
+			<!-- TOP HEADER -->
+			<div id="top-header">
+				<div class="top-header_container">
+					<!-- LOGO -->
+					<div class="header-logo">
+						<img src="../img/“言传”logo.png" alt=""></a>
+					</div>
+					<!-- /LOGO -->
+					<div class="header-links-function">
+						<ul class="header-links">
+							<li></i> 基础课程</a></li>
+							<li></i> 互动学习</a></li>
+							<li></i> 文化探索</a></li>
+						</ul>
+					</div>
+					<!-- SEARCH BAR -->
+					<div class="header-search start-search-1">
+						<form>
+							<input class="input" placeholder="在这里搜索">
+							<button class="search-btn"><img src="../img/search.png"></button>
+						</form>
+					</div>
+					<div class="start-login-1">
+						<ul class="start-login-li-1">
+							<li></i>登录 | 注册</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<!-- /TOP HEADER -->
+		</header>
+		<!-- /HEADER -->
+        <div class="bg_logo_yc "></div>
+        <div class="black-login-overlay"></div>
+        
+        <div class="login-group">
+            <div class="login login-bg">
+                <div class="bg-r-t"></div>
+                <div class="login-title">
+                    <div class="login-logo"></div>
+                    <div id="identity-info">请选择身份登录</div>
+                </div>
+
+                <div class="login-identity">
+                    <div class="login-container">
+                        
+                        <div class="login-form">
+                            <div class="text-title-1">手机登录</div>
+                            <div class="text-set-1">
+                                <input class="text-regular" type="text" placeholder="请输入手机号">
+                                <div class="yz">
+                                    <input type="text" placeholder="请输入验证码">
+                                    <div class="text-label">| 发送验证码</div>
+                                </div>
+                                <button  id="loginButton">登录</button>
+                            </div>
+                        </div>
+                        <div class="login-wechat">
+                            <div class="text-title-2">微信扫码登录</div>
+                            <img src="../img/wechat.png" alt="微信二维码" width="150">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="checkbox" name="agreement" checked>
+                    <label for="checkbox">登录默认已阅读同意《用户服务协议》及《隐私政策》</label>
+                        
+                </div>
+            </div>
+        </div>
+        
+		<!-- 身份信息传递 -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // 在登录页面根据 URL 参数显示不同的内容
+                var params = new URLSearchParams(window.location.search);
+                var identity = params.get('identity');
+                var infoParagraph = document.getElementById('identity-info');
+    
+                if (identity === 'school') {
+                    infoParagraph.textContent = '学校端';
+                } else if (identity === 'teacher') {
+                    infoParagraph.textContent = '教师端';
+                } else if (identity === 'student') {
+                    infoParagraph.textContent = '学生端';
+                } else {
+                    infoParagraph.textContent = '请选择身份登录';
+                }
+            });
+
+            // 获取按钮元素
+            var loginButton = document.getElementById("loginButton");
+            
+            // 为按钮添加点击事件监听器
+            loginButton.addEventListener("click", function() {
+                // 这里您可以添加一些登录验证逻辑，例如检查手机号和验证码是否输入
+
+                // 假设验证通过了，跳转到新页面
+                window.location.href = "class.html";
+            });
+
+        </script>
+
+		<!-- jQuery Plugins -->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/slick.min.js"></script>
+		<script src="../js/nouislider.min.js"></script>
+		<script src="../js/jquery.zoom.min.js"></script>
+		<script src="../js/main.js"></script>
+
+	</body>
+</html>
+
+

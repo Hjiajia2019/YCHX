@@ -1,0 +1,128 @@
+/* Slider */
+/* .slick-slider：轮播组件的容器，设置其为相对定位、块级元素，并禁止用户选择和触摸事件。*/
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+/* .slick-list：轮播组件的列表容器，设置其为相对定位、块级元素，并隐藏溢出内容 */
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+/* .slick-slider .slick-track, .slick-slider .slick-list：轮播组件的轨道和列表容器，应用3D变换以提高渲染性能。
+.slick-track：轮播组件的轨道，设置其为相对定位，并在水平方向居中。
+.slick-slide：轮播组件的每个幻灯片，将其设置为隐藏，并浮动在左侧。
+dir='rtl' .slick-slide：如果页面设置了从右到左的文本方向，则将幻灯片浮动到右侧。
+.slick-slide img：轮播组件中的图片，设置其为块级元素。
+.slick-initialized .slick-slide：在初始化轮播组件后，将幻灯片设置为显示。
+.slick-vertical .slick-slide：如果轮播组件垂直排列，则将幻灯片设置为块级元素，并添加边框。
+此外，还有一条.slick-arrow.slick-hidden的样式规则，用于隐藏轮播组件的箭头。 */
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
